@@ -1,4 +1,4 @@
-# Go implementation of libcardutils (v0.1)
+# Go implementation of libcardutils (v0.2)
 
 ## Purpose
 This software library allows extraction of first name, last name, 
@@ -26,6 +26,11 @@ You will then be able to pull the data off of the card like this:
 `card.GetLastName()`
 
 `card.GetID()`
+
+## Contributing
+Before you commit any change, be sure you run `go test` to ensure that your 
+contributions pass all tests. If your contribution contains a new feature or 
+function, be sure to add proper testcases for it.
 
 ## License
 Oh, yeah, and this is licensed under APACHE2 or something.
