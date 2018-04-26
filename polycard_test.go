@@ -40,6 +40,15 @@ func TestCardDataGeneration(t *testing.T) {
          "ELIZABETH WAGNER JR",
          "5591",
       },
+      {
+         "Hyphenated Last Name",
+         "%B0123456789012345^TESTER-PERSON/JACOB        ^" +
+         "0123456U0000002345?;1234567890123456=01234567890123456?",
+         "JACOB",
+         "TESTER-PERSON",
+         "JACOB TESTER-PERSON",
+         "2345",
+      },
    }
 
    for _, table := range tables {
