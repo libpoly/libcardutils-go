@@ -49,6 +49,15 @@ func TestCardDataGeneration(t *testing.T) {
          "JACOB TESTER-PERSON",
          "2345",
       },
+      {
+         "Half-Swipe",
+         "%B9876543212345678^WILLIAMS/GEORGE           ^" +
+         "1234567U0000008888?",
+         "GEORGE",
+         "WILLIAMS",
+         "GEORGE WILLIAMS",
+         "8888",
+      },
    }
 
    for _, table := range tables {
