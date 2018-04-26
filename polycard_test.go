@@ -31,6 +31,15 @@ func TestCardDataGeneration(t *testing.T) {
          "ALEXANDER ANDERSON",
          "4290",
       },
+      {
+         "Double Last Name",
+         "%B0123456789012345^WAGNER JR/ELIZABETH A      ^" +
+         "0123456U0000005591?;1234567890123456=01234567890123456?",
+         "ELIZABETH",
+         "WAGNER JR",
+         "ELIZABETH WAGNER JR",
+         "5591",
+      },
    }
 
    for _, table := range tables {
