@@ -11,7 +11,11 @@ type polyCard struct{
     id string
 }
 
-func CreateCard(cardData string) polyCard {
+func New() *polyCard {
+   return &polyCard{}
+}
+
+func (pc *polyCard) Swipe(cardData string) error {
     // regex pattern to find last/first name
     // \\ = Go's string escape squence.
     nameReg, _ := regexp.Compile("\\^([a-zA-Z/ \\-]+)")
@@ -26,8 +30,10 @@ func CreateCard(cardData string) polyCard {
     first := strings.Split(nameSlice[1], " ")[0]
     last := nameSlice[0]
 
-    card := polyCard{fname: first, lname: last, id: stuNum}
-    return card
+    pc.fname = first
+    pc.lname = last
+    pc.id = stuNum
+    return nil
 }
 
 func (pc polyCard) GetFirstName() string {
