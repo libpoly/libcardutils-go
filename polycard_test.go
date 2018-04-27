@@ -59,10 +59,11 @@ func TestCardDataGeneration(t *testing.T) {
          "8888",
       },
    }
+   // Test Setup
+   cardObj := New()
 
    for _, table := range tables {
-      // Test Setup
-      cardObj := CreateCard(table.data)
+      cardObj.Swipe(table.data)
 
       // Test Execution
       t.Run(table.testCase, func(t *testing.T) {
@@ -82,7 +83,8 @@ func TestCardDataGeneration(t *testing.T) {
                cardObj.GetFullName(), table.fullName)
          }
          if cardObj.GetID() != table.id {
-            t.Errorf("ID generation was incorrect,\n\t got: %q, want: %q.",
+            t.Errorf("ID generation was incorrect,\n\t " +
+               "got: %q, want: %q.",
                cardObj.GetID(), table.id)
          }
       })
