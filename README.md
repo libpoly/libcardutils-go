@@ -17,7 +17,10 @@ Using a USB magstripe reader, keep the card's data in a string.
 For example, if your string's name is `cardData`, and you want to represent 
 the card as an object named `card`, you would do this:
 
-`card := cardutils.CreateCard(cardData)`
+```
+card := cardutils.New()
+card.Swipe(cardData)
+```
 
 You will then be able to pull the data off of the card like this:
 
